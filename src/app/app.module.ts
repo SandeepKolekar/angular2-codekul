@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { InnerSampleComponentComponent } from './inner-sample-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InnerSampleComponentComponent
   ],
   imports: [
     BrowserModule
