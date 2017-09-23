@@ -5,6 +5,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p>
       inner-sample-component Works!
+
+
+
+      
     </p>
   `,
   styles: []
