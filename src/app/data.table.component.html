@@ -1,0 +1,40 @@
+
+<h2>Data table with Pagination , Sorting , Filtering</h2>
+<div class="jumbotron">
+    <div class="table-responsive">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>
+                <span>ID</span>
+                <span class="sortIcon"><i class="fa fa-sort" aria-hidden="true"></i> </span>
+                <input type="text" class="form-control" id="idFilter" placeholder="ID">
+            </th>
+            <th>
+                <span>Name</span>
+                <span class="sortIcon"><i class="fa fa-sort" aria-hidden="true"></i> </span>
+                <input type="text" class="form-control" id="nameFilter" placeholder="Name">
+            </th>
+            <th>
+                <span>Email</span>
+                <span class="sortIcon"><i class="fa fa-sort" aria-hidden="true"></i> </span>
+                <input type="text" class="form-control" id="emailFilter" placeholder="Email">
+            </th>
+            <th>
+                <span>Mobile</span>
+                <span class="sortIcon"><i class="fa fa-sort" aria-hidden="true"></i> </span>
+                <input type="text" class="form-control" id="mobileFilter" placeholder="Mobile">
+            </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of employeeData" >
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.mobile}}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>

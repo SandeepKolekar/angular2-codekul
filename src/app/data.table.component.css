@@ -1,0 +1,17 @@
+h4 {
+  text-align: left;
+  color: blue;
+}
+
+.jumbotron {
+  padding: 1rem 1rem;
+}
+
+th , td , table th input {
+  text-align: center;
+}
+
+.sortIcon {
+  float: right;
+  cursor: pointer;
+}

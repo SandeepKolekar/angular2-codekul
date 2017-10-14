@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComponentDataTableComponent } from './component-data-table.component';
 
 @Component({
   selector: 'app-root',

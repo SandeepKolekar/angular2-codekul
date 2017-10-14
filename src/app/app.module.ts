@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { InnerSampleComponentComponent } from './inner-sample-component.component';
-
+import { ComponentDataTableComponent } from './component-data-table.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InnerSampleComponentComponent
+    ComponentDataTableComponent
   ],
-  imports: [
+  imports: [NgbModule,
     BrowserModule
   ],
   providers: [],
