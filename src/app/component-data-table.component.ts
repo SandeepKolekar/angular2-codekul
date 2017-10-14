@@ -20,6 +20,7 @@ export class ComponentDataTableComponent implements OnInit {
       {id : 1, name: 'sandeep kolekar', email: 'sandeep@gmail.com', mobile: 9857585525},
       {id : 1, name: 'sandeep kolekar', email: 'sandeep@gmail.com', mobile: 9857585525},
       {id : 1, name: 'sandeep kolekar', email: 'sandeep@gmail.com', mobile: 9857585525},
+      {id : 1, name: 'sandeep kolekar', email: 'sandeep@gmail.com', mobile: 9857585525},
       {id : 2, name: 'manisha kadam', email: 'manisha@gmail.com', mobile: 4525255555},
       {id : 2, name: 'manisha kadam', email: 'manisha@gmail.com', mobile: 4525255555},
       {id : 2, name: 'manisha kadam', email: 'manisha@gmail.com', mobile: 4525255555},
