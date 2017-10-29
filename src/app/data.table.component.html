@@ -2,41 +2,47 @@
 <h2>Data table with Pagination , Sorting , Filtering</h2>
 <div class="jumbotron">
     <div class="table-responsive"  >
-        <table class="table  table-hover table-bordered" *ngIf="employeeData.length">
+        <table class="table  table-hover table-bordered">
             <thead>
                 <tr>
+                        <th>
+                                <span>SR-No</span>
+                               
+                            </th>
                     <th>
                         <span>ID</span>
                         <span class="sortIcon" (click)="idSortFlag = ! tableSort(idSortFlag,'id');"><i class="fa fa-sort" aria-hidden="true"></i> </span>
                         <div class="filterInput">
-                            <input type="text" class="form-control" #idFilter (blur)="tableFilter(idFilter.value,'id');" placeholder="ID">
+                            <input type="text" class="form-control" #idFilter (blur)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);" placeholder="ID">
+                            <!-- <input [(ngModel)]="selectedItem" (ngModelChange)="onChange($event)"> -->
                         </div>
                     </th>
                     <th>
                         <span>Name</span>
                         <span class="sortIcon" (click)="nameSortFlag = ! tableSort(nameSortFlag,'name');"><i class="fa fa-sort" aria-hidden="true"></i> </span>
                         <div class="filterInput">
-                            <input type="text" class="form-control" #nameFilter (blur)="tableFilter(nameFilter.value,'name');" placeholder="Name">
+                            <input type="text" class="form-control" #nameFilter (blur)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);" placeholder="Name">
                         </div>
                     </th>
                     <th>
                         <span>Email</span>
                         <span class="sortIcon" (click)="emailSortFlag = ! tableSort(emailSortFlag,'email');"><i class="fa fa-sort" aria-hidden="true"></i> </span>
                         <div class="filterInput">
-                            <input type="text" class="form-control" #emailFilter (blur)="tableFilter(emailFilter.value,'email');" placeholder="Email">
+                            <input type="text" class="form-control" #emailFilter (blur)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);" placeholder="Email">
                         </div>
                     </th>
                     <th>
                         <span>Mobile</span>
                         <span class="sortIcon" (click)="mobileSortFlag = ! tableSort(mobileSortFlag,'mobile');"><i class="fa fa-sort" aria-hidden="true"></i> </span>
                         <div class="filterInput">
-                            <input type="text" class="form-control" #mobileFilter (blur)="tableFilter(mobileFilter.value,'mobile');" placeholder="Mobile">
+                            <input type="text" class="form-control" #mobileFilter (blur)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);" placeholder="Mobile">
                         </div>
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of employeeData" >
+                <tr *ngFor="let item of employeeData ; let i = index" >
+                    <td>{{i+1}}</td>
                     <td>{{item.id}}</td>
                     <td>{{item.name}}</td>
                     <td>{{item.email}}</td>
@@ -44,6 +50,6 @@
                 </tr>
             </tbody>
         </table>
-        <h5 *ngIf="! employeeData.length">Employee not found</h5>
+        <!-- <h5 *ngIf="! employeeData.length">Employee not found</h5> -->
     </div>
 </div>
