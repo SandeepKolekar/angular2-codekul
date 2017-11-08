@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { ComponentDataTableComponent } from './component-data-table.component';
+import { Router } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SignupComponent } from './signup/signup.component';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +11,9 @@ import { ComponentDataTableComponent } from './component-data-table.component';
 })
 export class AppComponent {
   title = 'app';
-}
+  constructor(
+    private router: Router
+  ) { }
 
+
+}

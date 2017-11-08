@@ -1,20 +1,18 @@
 
 <h2>Data table with Pagination , Sorting , Filtering</h2>
 <div class="jumbotron">
-    <div class="table-responsive"  >
+    <div class="table-responsive">
         <table class="table  table-hover table-bordered">
             <thead>
                 <tr>
-                        <th>
-                                <span>SR-No</span>
-                               
-                            </th>
+                    <th>
+                        <span>SR-No</span>
+                    </th>
                     <th>
                         <span>ID</span>
                         <span class="sortIcon" (click)="idSortFlag = ! tableSort(idSortFlag,'id');"><i class="fa fa-sort" aria-hidden="true"></i> </span>
                         <div class="filterInput">
                             <input type="text" class="form-control" #idFilter (keyup)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);" placeholder="ID">
-                            <!-- <input [(ngModel)]="selectedItem" (ngModelChange)="onChange($event)"> -->
                         </div>
                     </th>
                     <th>
