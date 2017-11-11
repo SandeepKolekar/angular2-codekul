@@ -1,15 +1,20 @@
 
 import { RouterModule, Routes } from '@angular/router';
-import { ComponentDataTableComponent } from './component-data-table.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DataTableComponent } from './data-table/data-table.component';
+
+const dashRoutes: Routes = [
+    { path: 'dataTable', component: DataTableComponent }
+];
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'fotgotpassword', component: ForgotPasswordComponent },
-    { path: 'dataTable', component: ComponentDataTableComponent },
+    { path: 'dashboard', component: DashboardComponent , children: dashRoutes },
     { path: 'register', redirectTo: 'signup' },
     { path: '**', redirectTo: 'login' }
 ];

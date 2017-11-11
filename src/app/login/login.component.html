@@ -1,11 +1,15 @@
-<div class="login-page">
-  <div class="form">
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? 
-          <a [routerLink]="['signup']">Create an account!</a>
-      </p>
+
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+    <h1>Login to Your Account{{currentDate}}</h1><br>
+    <form>
+    <input type="text" name="user" placeholder="Username">
+    <input type="password" name="pass" placeholder="Password">
+    <input type="button" name="login" class=" form-control login loginmodal-submit" (click)="doLogin();" value="Login" >
     </form>
+    
+    <div class="login-help">
+    <a [routerLink]="['/signup']">Signup</a> - <a [routerLink]="['/fotgotpassword']">Forgot Password</a>
+    </div>
   </div>
+</div>

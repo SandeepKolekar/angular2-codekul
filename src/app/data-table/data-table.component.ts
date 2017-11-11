@@ -3,12 +3,14 @@ import { NgModel } from '@angular/forms';
 import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-component-data-table',
-  templateUrl: './data.table.component.html',
+  selector: 'app-data-table',
+  templateUrl: './data-table.component.html',
   providers: [NgbPaginationConfig], // add NgbPaginationConfig to the component providers
-  styleUrls: ['./data.table.component.css']
+  styleUrls: ['./data-table.component.css']
 })
-export class ComponentDataTableComponent implements OnInit {
+export class DataTableComponent implements OnInit {
+
+ 
 
   employeeData = [];
   employeeTempData = [];
@@ -143,4 +145,5 @@ export class ComponentDataTableComponent implements OnInit {
     ];
     this.employeeTempData = this.employeeData  ;
   }
+
 }
