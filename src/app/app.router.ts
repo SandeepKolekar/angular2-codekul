@@ -5,9 +5,13 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { FormsComponent } from './forms/forms.component';
+import { HttpDemoComponent } from './http-demo/http-demo.component';
 
 const dashRoutes: Routes = [
-    { path: 'dataTable', component: DataTableComponent }
+    { path: 'dataTable', component: DataTableComponent },
+    { path: 'formsDemo', component: FormsComponent },
+    { path: 'httpDemo', component: HttpDemoComponent }
 ];
 
 const routes: Routes = [

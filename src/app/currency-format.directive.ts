@@ -4,7 +4,6 @@ import { Directive } from '@angular/core';
   selector: '[appCurrencyFormat]'
 })
 export class CurrencyFormatDirective {
-
   constructor() { }
 
 }

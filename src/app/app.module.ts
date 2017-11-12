@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GlobalService } from './global/global.service';
 import { CurrencyFormatDirective } from './currency-format.directive';
+import { FormsComponent } from './forms/forms.component';
+import { HttpDemoComponent } from './http-demo/http-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { CurrencyFormatDirective } from './currency-format.directive';
     DataTableComponent,
     HeaderComponent,
     FooterComponent,
-    CurrencyFormatDirective
+    CurrencyFormatDirective,
+    FormsComponent,
+    HttpDemoComponent
   ],
   imports: [NgbModule,
     BrowserModule,

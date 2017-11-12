@@ -1,5 +1,5 @@
 <!-- Angular 2 start app root partials -->
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+<!-- <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
   <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,9 +18,32 @@
         <h4>
           Welcome sandeep (
           {{currentDate | date:'dd-MMM-yyyy'}})
-
           <input type="button" name="logout" class="form-control btn btn-danger" (click)="logout();" value="Logout">
         </h4>
     </form>
   </div>
-</nav>
+</nav> -->
+
+<div class="fixed-top-header">
+    <span class="pull-left logo">Logo </span>
+
+
+<ul class="pull-left ">
+    <li><a  [routerLink]="['dataTable']">Data Table</a></li>
+    <li><a  [routerLink]="['formsDemo']">Forms</a> </li>
+    <li><a  [routerLink]="['httpDemo']">Http</a> </li>
+    <li class="dropdown">
+      <a class="dropbtn">Dropdown</a>
+      <div class="dropdown-content">
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+
+
+    <span class="pull-right logout"> <input type="button" name="logout" class="btn-danger" style="outline:none;" (click)="logout();" value="Logout"></span>
+    <span class="pull-right">Welcome sandeep ( {{currentDate | date:'dd-MMM-yyyy'}})</span>
+  
+  </div>
+  

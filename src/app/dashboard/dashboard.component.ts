@@ -10,17 +10,13 @@ import { GlobalService } from '../global/global.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  currentDate: string;
+
   constructor(
     private router: Router,
     private GlobalService: GlobalService
   ) { }
 
   ngOnInit() {
-   // this.GlobalService.scribeDate(data => this.currentDate = data.dt );
-    //console.log(this.currentDate);
-    this.currentDate = this.GlobalService.getCurrentDate();
-    console.log(this.currentDate);
   }
 
   logout() {
