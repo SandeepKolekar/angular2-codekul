@@ -5,6 +5,7 @@ import { EventEmitter } from '@angular/core';
 export class GlobalService {
 
   currentDate: string;
+  token: string;
   private em: EventEmitter<any>;
 
   constructor() {
@@ -31,6 +32,12 @@ export class GlobalService {
     return this.currentDate ;
   }
 
+  setUserData(token) {
+    this.token = token ;
+  }
 
+  getUserData() {
+    return this.token ;
+  }
 
 }

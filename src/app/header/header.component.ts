@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
+    this.GlobalService.setUserData('');
     this.router.navigate(['login']);
   }
 }

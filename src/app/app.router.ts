@@ -7,18 +7,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { FormsComponent } from './forms/forms.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
+import { AuthTokenGuard } from './auth-token.guard';
+import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-source.component';
 
 const dashRoutes: Routes = [
-    { path: 'dataTable', component: DataTableComponent },
-    { path: 'formsDemo', component: FormsComponent },
-    { path: 'httpDemo', component: HttpDemoComponent }
+    { path: 'dataTable', component: DataTableComponent , canActivate: [AuthTokenGuard]},
+    { path: 'formsDemo', component: FormsComponent , canActivate: [AuthTokenGuard]},
+    { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]}
 ];
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'fotgotpassword', component: ForgotPasswordComponent },
-    { path: 'dashboard', component: DashboardComponent , children: dashRoutes },
+    { path: 'dashboard', component: DashboardComponent , children: dashRoutes , canActivate: [AuthTokenGuard] },
+    { path: 'unauthorized', component: UnauthorizedSourceComponent },
     { path: 'register', redirectTo: 'signup' },
     { path: '**', redirectTo: 'login' }
 ];

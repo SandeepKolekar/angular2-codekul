@@ -19,9 +19,10 @@ export class LoginComponent implements OnInit {
   }
 
   doLogin() {
-    this.GlobalService.currentDate = new Date().toString();
-    this.GlobalService.emitDate();
+    //this.GlobalService.currentDate = new Date().toString();
+    //this.GlobalService.emitDate();
     this.GlobalService.setCurrentDate(new Date().toString());
+    this.GlobalService.setUserData('abc123456');
     this.router.navigate(['dashboard']);
   }
 

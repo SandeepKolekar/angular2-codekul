@@ -14,6 +14,8 @@ import { GlobalService } from './global/global.service';
 import { CurrencyFormatDirective } from './currency-format.directive';
 import { FormsComponent } from './forms/forms.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
+import { AuthTokenGuard } from './auth-token.guard';
+import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-source.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +28,14 @@ import { HttpDemoComponent } from './http-demo/http-demo.component';
     FooterComponent,
     CurrencyFormatDirective,
     FormsComponent,
-    HttpDemoComponent
+    HttpDemoComponent,
+    UnauthorizedSourceComponent
   ],
   imports: [NgbModule,
     BrowserModule,
     AppRouting
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, AuthTokenGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
