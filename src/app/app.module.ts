@@ -16,6 +16,9 @@ import { FormsComponent } from './forms/forms.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
 import { AuthTokenGuard } from './auth-token.guard';
 import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-source.component';
+import { UpperCasePipePipe } from './upper-case-pipe.pipe';
+import { DashlinePipe } from './dashline.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +32,15 @@ import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-
     CurrencyFormatDirective,
     FormsComponent,
     HttpDemoComponent,
-    UnauthorizedSourceComponent
+    UnauthorizedSourceComponent,
+    UpperCasePipePipe,
+    DashlinePipe
   ],
   imports: [NgbModule,
     BrowserModule,
-    AppRouting
+    AppRouting,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [GlobalService, AuthTokenGuard],
   bootstrap: [AppComponent]

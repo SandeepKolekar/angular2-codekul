@@ -2,14 +2,16 @@
 <div class="modal-dialog">
   <div class="loginmodal-container">
     <h1>Login to Your Account{{currentDate}}</h1><br>
-    <form>
-    <input type="text" name="user" placeholder="Username">
-    <input type="password" name="pass" placeholder="Password">
-    <input type="button" name="login" class=" form-control login loginmodal-submit" (click)="doLogin();" value="Login" >
+    <form class="form-horizontal" novalidate [formGroup]="fg" (ngSubmit)="doLogin()">
+      <input type="text" formControlName="usNm" name="user" placeholder="Username(Email)">
+      <div *ngIf="fg.controls.usNm.dirty">
+         <p class="help-block" *ngIf="!fg.controls.usNm.valid">Invalid Email ID</p>
+      </div>
+      <input type="password" formControlName="pass" name="pass" placeholder="Password">
+      <input type="submit" name="login" class=" form-control login loginmodal-submit" [disabled]="!fg.valid" value="Login" >
     </form>
-    
     <div class="login-help">
-    <a [routerLink]="['/signup']">Signup</a> - <a [routerLink]="['/fotgotpassword']">Forgot Password</a>
+       <a [routerLink]="['/signup']">Signup</a> - <a [routerLink]="['/fotgotpassword']">Forgot Password</a>
     </div>
   </div>
 </div>
