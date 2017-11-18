@@ -19,6 +19,8 @@ import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-
 import { UpperCasePipePipe } from './upper-case-pipe.pipe';
 import { DashlinePipe } from './dashline.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpService } from './http/http.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,9 +42,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRouting,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [GlobalService, AuthTokenGuard],
+  providers: [GlobalService, HttpService, AuthTokenGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
